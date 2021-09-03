@@ -19,5 +19,10 @@ export { updateTaxToPub } from "./onUpdate"
 /*onUpdate*/
 export { updateToRecentOrder } from "./order/onUpdate"
 
-//order rest api 
+/*order*/
+//rest api 
 export { orders } from "./order/rest.api"
+
+/*user*/
+//callable function
+export { makeFranchise } from "./franchise/create"
