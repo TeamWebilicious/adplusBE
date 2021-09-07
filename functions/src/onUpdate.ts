@@ -4,7 +4,7 @@ import * as admin from "firebase-admin";
 
 const db = admin.firestore()
 
-export const updateTaxToPub = functions.firestore?.document('pages/general')
+/*export const updateTaxToPub = functions.firestore?.document('pages/general')
     ?.onUpdate(
         async (change, context) => {
 
@@ -26,3 +26,9 @@ export const updateTaxToPub = functions.firestore?.document('pages/general')
                 })
             }
         })
+
+*/
+
+
+
+
