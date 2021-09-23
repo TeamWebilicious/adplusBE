@@ -67,24 +67,19 @@ export const duplicateToPagesCat = functions.firestore?.document('publications/{
             async (snapshot, context) => {
 
                 // console.log("runingggggggggggg............")
-
                 const data = snapshot.data();
-
+                
                 const all = db.doc("pages/schemes")
                 const responses = await all.get();
                 const allSchemes = responses.data()?.all
 
-                allSchemes.push({
-                    name: data?.name,
-                    publicationsId: snapshot.id,
-                    description:null,
-                })
+                allSchemes.push({id: snapshot.id, ...data})
 
                 return all.update({
                           all:allSchemes
                 })
-
             })
+
 export const duplicateEditions = functions.firestore?.document('publications/editions/{editionid}')
             ?.onCreate(
                 async (snapshot, context) => {
